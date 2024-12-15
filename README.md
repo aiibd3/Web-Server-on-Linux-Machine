@@ -37,10 +37,10 @@ Steps to connect to a cloud-based Linux instance (e.g., AWS EC2) remotely using 
    chmod 400 my-key.pem
 
 
-##Step-by-Step Setup Instructions
-#1) Launch an EC2 Instance on AWS.
+Step-by-Step Setup Instructions
+## 1. Launch an EC2 Instance on AWS.
 
-#2) Install LAMP Stack:
+## 2. Install LAMP Stack:
 sudo yum update -y
 sudo yum install -y httpd mariadb-server php php-mysqli
 sudo systemctl start httpd
@@ -49,7 +49,7 @@ sudo systemctl start mariadb
 sudo mysql_secure_installation
 
 
-#3) Configure the Database:
+## 3. Configure the Database:
 CREATE DATABASE web_db;
 CREATE USER 'web_user'@'localhost' IDENTIFIED BY 'StrongPassword123';
 GRANT ALL PRIVILEGES ON web_db.* TO 'web_user'@'localhost';
@@ -57,7 +57,7 @@ FLUSH PRIVILEGES;
 EXIT;
 
 
-#4) Deploy PHP Code:
+## 4. Deploy PHP Code:
 sudo nano /var/www/html/index.php
 
 # Add the following content:
@@ -80,10 +80,10 @@ echo "Connected successfully to the database!";
 ?>
 ```
 
-#5) Make Website Accessible Externally:
+## 5. Make Website Accessible Externally:
 Update the Security Group to allow traffic on ports 80 (HTTP) and 22 (SSH).
 
-#6) Push Code to GitHub:
+## 6. Push Code to GitHub:
 git init
 git add .
 git commit -m "Initial commit: LAMP stack setup with database connection"
