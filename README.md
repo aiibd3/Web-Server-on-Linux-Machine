@@ -84,10 +84,10 @@ echo "Connected successfully to the database!";
 Update the Security Group to allow traffic on ports 80 (HTTP) and 22 (SSH).
 
 ## 6. Push Code to GitHub:
--git init
--git add .
--git commit -m "Initial commit: LAMP stack setup with database connection"
--git remote add origin https://github.com/aiibd3/Web-Server-on-Linux-Machine.git
+- git init
+- git add .
+- git commit -m "Initial commit: LAMP stack setup with database connection"
+- git remote add origin https://github.com/aiibd3/Web-Server-on-Linux-Machine.git
 - git push -u origin master
 
 
