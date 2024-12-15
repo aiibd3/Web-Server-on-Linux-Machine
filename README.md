@@ -95,7 +95,6 @@ Update the Security Group to allow traffic on ports 80 (HTTP) and 22 (SSH).
 - https://github.com/aiibd3/Web-Server-on-Linux-Machine
 
 # Public URL
-#- The website is accessible at:
-- http://54.157.30.130
+## The website is accessible at: http://54.157.30.130
 
 
