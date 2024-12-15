@@ -61,6 +61,10 @@ EXIT;
 sudo nano /var/www/html/index.php
 
 # Add the following content:
+### PHP Code Example
+Below is the PHP code to establish a database connection:
+
+```php
 <?php
 $servername = "localhost";
 $username = "web_user";
@@ -74,6 +78,7 @@ if ($conn->connect_error) {
 }
 echo "Connected successfully to the database!";
 ?>
+
 
 
 #5) Make Website Accessible Externally:
