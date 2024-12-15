@@ -78,12 +78,11 @@ if ($conn->connect_error) {
 }
 echo "Connected successfully to the database!";
 ?>
-
-
+```
 
 #5) Make Website Accessible Externally:
-
 Update the Security Group to allow traffic on ports 80 (HTTP) and 22 (SSH).
+
 #6) Push Code to GitHub:
 git init
 git add .
@@ -91,11 +90,10 @@ git commit -m "Initial commit: LAMP stack setup with database connection"
 git remote add origin https://github.com/aiibd3/Web-Server-on-Linux-Machine.git
 git push -u origin master
 
-##GitHub Repository
+GitHub Repository
 - https://github.com/aiibd3/Web-Server-on-Linux-Machine
 
-
-##Public URL
+Public URL
 #The website is accessible at:
 - http://54.157.30.130
 
