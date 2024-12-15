@@ -2,8 +2,7 @@
 
 ## 1. IP Address
 An **IP Address** (Internet Protocol Address) is a unique identifier assigned to devices on a network.  
-- **Purpose:** It allows devices to locate and communicate with each other over a network.  
-- **Example:** `192.168.1.10` (IPv4) or `2001:0db8:85a3::8a2e:0370:7334` (IPv6).
+- **Purpose:** It allows devices to locate and communicate with each other over a network.
 
 ---
 
@@ -29,13 +28,10 @@ A **MAC Address** (Media Access Control Address) is a hardware-based identifier 
 ---
 
 ## 4. Remote Connection to Cloud Instance
-Steps to connect to a cloud-based Linux instance (e.g., AWS EC2) remotely using SSH:
+Steps to connect to a cloud-based Linux instance (AWS EC2) remotely using SSH:
 
 1. Open a terminal or SSH client.
-2. Ensure the private key file (.pem) is available and set correct permissions:
-   ```bash
-   chmod 400 my-key.pem
-
+2. Ensure the private key file (.pem) is available and set correct permissions.
 
 Step-by-Step Setup Instructions
 ## 1. Launch an EC2 Instance on AWS.
@@ -95,6 +91,7 @@ Update the Security Group to allow traffic on ports 80 (HTTP) and 22 (SSH).
 - https://github.com/aiibd3/Web-Server-on-Linux-Machine
 
 # Public URL
-## The website is accessible at: http://54.157.30.130
+## The website is accessible at: 
+- http://54.157.30.130
 
 
