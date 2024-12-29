@@ -63,27 +63,22 @@ Below is the PHP code to establish a database connection:
 ```php
 <?php
 $servername = "localhost";
-$username = "web_user"; // Database username
-$password = "StrongPassword123"; // Database password
-$dbname = "web_db"; // Database name
+$username = "web_user"; 
+$password = "StrongPassword123"; 
+$dbname = "web_db"; 
 
-// Create connection to the database
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-// Check the connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Update the visit counter
 $conn->query("UPDATE visits_counter SET visits_count = visits_count + 1 WHERE id = 1");
 
-// Retrieve the current visit count
 $result = $conn->query("SELECT visits_count FROM visits_counter WHERE id = 1");
 $row = $result->fetch_assoc();
 $visits = $row['visits_count'];
 
-// Display the results on the page
 echo "<!DOCTYPE html>
 <html>
 <head>
@@ -111,10 +106,6 @@ Update the Security Group to allow traffic on ports 80 (HTTP) and 22 (SSH).
 - git commit -m "Initial commit: LAMP stack setup with database connection"
 - git remote add origin https://github.com/aiibd3/Web-Server-on-Linux-Machine.git
 - git push -u origin master
-
-
-# GitHub Repository
-- https://github.com/aiibd3/Web-Server-on-Linux-Machine
 
 # Public URL
 ## The website is accessible at: 
