@@ -60,42 +60,6 @@ sudo nano /var/www/html/index.php
 ### PHP Code Example
 Below is the PHP code to establish a database connection:
 
-```php
-<?php
-$servername = "localhost";
-$username = "web_user"; 
-$password = "StrongPassword123"; 
-$dbname = "web_db"; 
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
-$conn->query("UPDATE visits_counter SET visits_count = visits_count + 1 WHERE id = 1");
-
-$result = $conn->query("SELECT visits_count FROM visits_counter WHERE id = 1");
-$row = $result->fetch_assoc();
-$visits = $row['visits_count'];
-
-echo "<!DOCTYPE html>
-<html>
-<head>
-    <title>Welcome to My Website</title>
-</head>
-<body>
-    <h1>Hello World!</h1>
-    <p>Your IP Address: " . $_SERVER['REMOTE_ADDR'] . "</p>
-    <p>Current Time: " . date('Y-m-d H:i:s') . "</p>
-    <p>Connected to the database successfully!</p>
-    <p>Total Visits: " . $visits . "</p>
-</body>
-</html>";
-
-$conn->close();
-?>
-```
 
 ## 5. Make Website Accessible Externally:
 Update the Security Group to allow traffic on ports 80 (HTTP) and 22 (SSH).
