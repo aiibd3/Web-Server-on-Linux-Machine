@@ -1,26 +1,21 @@
 <?php
 $servername = "localhost";
-$username = "web_user"; // Database username
-$password = "StrongPassword123"; // Database password
-$dbname = "web_db"; // Database name
+$username = "web_user"; 
+$password = "StrongPassword123"; 
+$dbname = "web_db"; 
 
-// Create connection to the database
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-// Check the connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Update the visit counter
 $conn->query("UPDATE visits_counter SET visits_count = visits_count + 1 WHERE id = 1");
 
-// Retrieve the current visit count
 $result = $conn->query("SELECT visits_count FROM visits_counter WHERE id = 1");
 $row = $result->fetch_assoc();
 $visits = $row['visits_count'];
 
-// Display the results on the page
 echo "<!DOCTYPE html>
 <html>
 <head>
